@@ -153,7 +153,6 @@ p{
 
 @media screen and (max-width: 959px){
   .reverse{
-    display: flex;
     flex-direction: row-reverse;
   }
 }
