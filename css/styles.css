@@ -1,12 +1,8 @@
 /* 共通 */
 
-.box-wrapper{
-  display: table;
-  margin: 0 auto;
-}
-
 .box-content{
-  display: table-cell;
+  display: flex;
+  justify-content: center;
 }
 
 p{
@@ -20,6 +16,7 @@ p{
   width: 300px;
   height: 300px;
   background: #ff0000;
+  margin: 0 auto;
 }
 
 .blue-box{
@@ -52,61 +49,31 @@ p{
   background: #ff00e1;
 }
 
-.flex-box-group{
-  display: flex;
-}
-
-
 
 /* Q1  サイズ変更 */
 
-.Red-box--size{
+.red-box--size{
   width: 400px;
   height: 400px;
   background: #ff0000;
   margin: 0 auto;
 }
 
-@media screen and (max-width: 959px){
-  .Red-box--size{
-  width: 200px;
-  height: 200px;
-  background: #ff0000;
-  }
-}
-
 
 
 /* Q2  色変更 */
-
-.red--color{
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 959px){
-  .red--color{
-    background: #007bff;
-  }
-}
-
 
 
 /* Q3  margin値の変更 */
 
 .margin-box{
   display: flex;
+  justify-content: center;
 }
 
 .blue--margin{
   margin-right: 150px;
 }
-
-@media screen and (max-width: 959px){
-  .blue--margin{
-    margin-right: 50px;
-  }
-}
-
 
 
 /* Q4  floatの解除 */
@@ -117,88 +84,109 @@ p{
   clear: both;
 }
 
-.red--float{
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.is--float{
   float: left;
 }
-
-.blue--float{
-  float: left;
-}
-
-@media screen and (max-width: 959px){
-  .red--float , .blue--float{
-    float: none;
-  }
-}
-
 
 
 /* Q5  flexboxの入れ替え(逆順） */
 
 .reverse{
   display: flex;
+  flex-direction: row;
 }
 
-.red--reverse{
+.box--reverse{
   position: relative;
 }
-
-.blue--reverse{
-  position: relative;
-}
-
-.orange--reverse{
-  position: relative;
-}
-
-@media screen and (max-width: 959px){
-  .reverse{
-    flex-direction: row-reverse;
-  }
-}
-
 
 
 /* Q6  flex-boxの入れ替え（指定） */
 
-.flex-box-group{
+.change{
   display: flex;
+  flex-direction: row;
+}
+
+.box--change{
+  position: relative;
 }
 
 .green--change{
-  position: relative;
+  order: 1;
 }
 
 .yellow--change{
-  position: relative;
+  order: 2;
 }
 
 .pink--change{
-  position: relative;
+  order: 3;
 }
-
-@media screen and (max-width: 959px){
-  .pink--change{
-    order: 1;
-  }
-  .green--change{
-    order: 2;
-  }
-  .yellow--change{
-    order: 3;
-  }
-}
-
 
 
 /* Q7  要素の表示・非表示 */
 
+.display{
+  display: flex;
+  flex-direction: row;
+}
 
 .blue--display{
   display: none;
 }
 
+.red--display{
+  display: block;
+}
+
+.green--display{
+  display: block;
+}
+
+
+/* media screen */
+
 @media screen and (max-width:959px){
+  .red-box--size{
+    width: 200px;
+    height: 200px;
+  }
+
+  .red--color{
+    background: #007bff;
+  }
+
+  .blue--margin{
+    margin-right: 50px;
+  }
+
+  .is--float {
+    float: none;
+  }
+
+  .reverse{
+    flex-direction: row-reverse;
+  }
+
+  .pink--change{
+    order: 1;
+  }
+
+  .green--change{
+    order: 2;
+  }
+
+  .yellow--change{
+    order: 3;
+  }
+
   .blue--display{
     display: block;
   }
