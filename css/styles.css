@@ -68,12 +68,9 @@ p{
   background: #ff0000;
   margin: 0 auto;
 }
-/* Q3  margin値の変更 */
 
-.margin-box{
-  display: flex;
-  justify-content: center;
-}
+
+/* Q3  margin値の変更 */
 
 .blue--margin{
   margin-right: 150px;
