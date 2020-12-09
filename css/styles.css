@@ -63,7 +63,12 @@ p{
 
 /* Q2  色変更 */
 
-
+.red-color-box{
+  width: 300px;
+  height: 300px;
+  background: #ff0000;
+  margin: 0 auto;
+}
 /* Q3  margin値の変更 */
 
 .margin-box{
@@ -77,12 +82,6 @@ p{
 
 
 /* Q4  floatの解除 */
-
-.clearfix{
-  content: "";
-  display: block;
-  clear: both;
-}
 
 .clearfix::after{
   content: '';
@@ -98,11 +97,10 @@ p{
 /* Q5  flexboxの入れ替え(逆順） */
 
 .reverse{
-  display: flex;
   flex-direction: row;
 }
 
-.box--reverse{
+.box--relative{
   position: relative;
 }
 
@@ -110,12 +108,7 @@ p{
 /* Q6  flex-boxの入れ替え（指定） */
 
 .change{
-  display: flex;
   flex-direction: row;
-}
-
-.box--change{
-  position: relative;
 }
 
 .green--change{
@@ -134,7 +127,6 @@ p{
 /* Q7  要素の表示・非表示 */
 
 .display{
-  display: flex;
   flex-direction: row;
 }
 
@@ -159,7 +151,7 @@ p{
     height: 200px;
   }
 
-  .red--color{
+  .red-color-box{
     background: #007bff;
   }
 
