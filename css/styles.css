@@ -187,6 +187,10 @@ p{
     order: 3;
   }
 
+  .red--display{
+    display: none;
+  }
+
   .blue--display{
     display: block;
   }
