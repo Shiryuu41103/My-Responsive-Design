@@ -142,27 +142,39 @@ p{
 /* media screen */
 
 @media screen and (max-width:959px){
+
+  /* Q1  サイズ変更 */
   .red-box--size{
     width: 200px;
     height: 200px;
   }
 
+
+  /* Q2  色変更 */
   .red-color-box{
     background: #007bff;
   }
 
+
+  /* Q3  margin値の変更 */
   .blue--margin{
     margin-right: 50px;
   }
 
+
+  /* Q4  floatの解除 */
   .is--float {
     float: none;
   }
 
+
+  /* Q5  flex-boxの入れ替え（逆順） */
   .reverse{
     flex-direction: row-reverse;
   }
 
+
+  /* Q6  flex-boxの入れ替え（指定） */
   .pink--change{
     order: 1;
   }
@@ -175,6 +187,8 @@ p{
     order: 3;
   }
 
+
+  /* Q7  要素の表示・非表示 */
   .red--display{
     display: none;
   }
